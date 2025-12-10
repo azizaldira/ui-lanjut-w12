@@ -32,3 +32,175 @@
   background: black;
   box-shadow: 0px 4px 10px rgba(18, 18, 223, 0.15);
 }
+
+/* ====== TAMBAHAN UNTUK HALAMAN TODO / COMPLETED / STATS ====== */
+
+/* Layout halaman di dalam .main */
+.page {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left; /* override text-align center dari .main */
+}
+
+/* Header di dalam page (judul + aksi) */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.page-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Kartu konten (container putih di atas background hitam layout) */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Form tambah to-do */
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.todo-input {
+  flex: 1;
+}
+
+/* Pencarian */
+.todo-search {
+  margin-bottom: 0.75rem;
+}
+
+.todo-search input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* List to-do */
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #eee;
+}
+
+.todo-item:first-child {
+  border-top: none;
+}
+
+.todo-item-main {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.todo-text {
+  word-break: break-word;
+}
+
+.todo-text-completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.todo-edit-input {
+  flex: 1;
+}
+
+.todo-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.todo-item-actions button {
+  white-space: nowrap;
+}
+
+/* Pesan kosong */
+.todo-empty {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: left;
+}
+
+/* ====== STYLING UNTUK HALAMAN STATS ====== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stats-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  background-color: #fff;
+}
+
+.stats-label {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
+}
+
+.stats-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Progress bar */
+.stats-progress-wrapper {
+  margin-top: 0.5rem;
+}
+
+.stats-progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.stats-progress-bar-fill {
+  height: 100%;
+  background-color: #4caf50; /* hijau, tetap nyambung dengan nuansa header */
+  transition: width 0.25s ease;
+}
+
+.stats-progress-text {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
